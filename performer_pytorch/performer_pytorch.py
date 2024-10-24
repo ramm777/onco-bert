@@ -410,14 +410,14 @@ class SelfAttention(nn.Module):
 
 # positional embeddings
 
-class AbsolutePositionalEmbedding(nn.Module):
-    def __init__(self, dim, max_seq_len):
-        super().__init__()
-        self.emb = nn.Embedding(max_seq_len, dim)
-
-    def forward(self, x):
-        t = torch.arange(x.shape[1], device=x.device)
-        return self.emb(t)
+#class AbsolutePositionalEmbedding(nn.Module):
+#    def __init__(self, dim, max_seq_len):
+#        super().__init__()
+#        self.emb = nn.Embedding(max_seq_len, dim)
+#
+#    def forward(self, x):
+#        t = torch.arange(x.shape[1], device=x.device)
+#        return self.emb(t)
 
 # rotary positional embedding helpers
 
